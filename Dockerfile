@@ -16,9 +16,7 @@ RUN mkdir -p /opt /srv \
     && \
     rm -rf /tmp/* \
     && \
-    apk del --no-cache .build-deps \
-    && \
-    rm -f /Gemfile*
+    apk del --no-cache .build-deps
 
 ENV PATH="${PATH}:/opt/google-cloud-sdk/bin"
 WORKDIR /srv
